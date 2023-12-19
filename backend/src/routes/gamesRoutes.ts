@@ -1,5 +1,5 @@
 import {Router} from "express";
-import {gamesController} from "../controllers/gamesControllers";
+import {gamesController} from "../controllers/gamesController";
 
 
 class GamesRoutes{
@@ -12,6 +12,10 @@ class GamesRoutes{
     private config() {
         this.router.post('/', gamesController.addGame)
         this.router.get('/', gamesController.listGames)
+        this.router.get('/game/:id', gamesController.getOneGame)
+        this.router.get('/byName/:name', gamesController.getGameByName)
+        this.router.patch('/:id', gamesController.updateGame)
+        this.router.delete('/:id', gamesController.deleteGame)
     }
 }
 
