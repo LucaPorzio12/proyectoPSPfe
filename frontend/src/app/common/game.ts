@@ -1,9 +1,9 @@
 export interface Game {
-  id: number
+  id?: number
   title: string
   subtitle: any
   description: string
   image: any
   favorite: boolean
-  created_at: string
+  created_at?: string
 }

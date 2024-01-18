@@ -1,0 +1,17 @@
+.toolbar{
+  border-radius: 5px;
+  border: solid lightgray 1px;
+  box-shadow: silver 1px 1px 2px 2px;
+}
+
+.card:hover{
+  box-shadow: lightgray 1px 1px 1px 1px, lightgray -1px -1px 1px 1px;
+}
+
+.start-10{
+  left: 50px;
+}
+
+fa-icon{
+  cursor: pointer;
+}

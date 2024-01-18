@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Game} from "../../common/game";
 import {GameService} from "../../services/game.service";
+import {faEdit, faHeart, faHeartBroken, faMagnifyingGlass, faTrashCan} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-games-list',
@@ -129,4 +130,10 @@ export class GamesListComponent {
       }
     );
   }
+
+  protected readonly faHeart = faHeart;
+  protected readonly faHeartBroken = faHeartBroken;
+  protected readonly faMagnifyingGlass = faMagnifyingGlass;
+  protected readonly faEdit = faEdit;
+  protected readonly faTrashCan = faTrashCan;
 }
