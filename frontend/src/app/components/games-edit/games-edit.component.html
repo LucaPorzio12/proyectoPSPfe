@@ -12,10 +12,10 @@
           <div *ngIf="title.invalid &&
 (title.dirty || title.touched)"
                class="alert alert-warning" role="alert">
-            <div *ngIf="title.errors.required || title.errors.notOnlyWhiteSpace">
+            <div *ngIf="title.errors.required || title.errors['notOnlyWhiteSpace']">
               Title es obligatorio
             </div>
-            <div *ngIf="title.errors.minlength">
+            <div *ngIf="title.errors['minlength']">
               Mínimo 2 caracteres
             </div>
           </div>
@@ -27,10 +27,10 @@
           <div *ngIf="subtitle.invalid &&
 (subtitle.dirty || subtitle.touched)"
                class="alert alert-warning" role="alert">
-            <div *ngIf="subtitle.errors.required || subtitle.errors.notOnlyWhiteSpace">
+            <div *ngIf="subtitle.errors.required || subtitle.errors['notOnlyWhiteSpace']">
               Subtitle es obligatorio
             </div>
-            <div *ngIf="subtitle.errors.minlength">
+            <div *ngIf="subtitle.errors['minlength']">
               Mínimo 2 caracteres
             </div>
           </div>
@@ -43,10 +43,10 @@
           <div *ngIf="description.invalid &&
 (description.dirty || description.touched)"
                class="alert alert-warning" role="alert">
-            <div *ngIf="description.errors.required || description.errors.notOnlyWhiteSpace">
+            <div *ngIf="description.errors.required || description.errors['notOnlyWhiteSpace']">
               Description es obligatorio
             </div>
-            <div *ngIf="description.errors.minlength">
+            <div *ngIf="description.errors['minlength']">
               Mínimo 2 caracteres
             </div>
           </div>
@@ -58,10 +58,10 @@
           <div *ngIf="image.invalid &&
 (image.dirty || image.touched)"
                class="alert alert-warning" role="alert">
-            <div *ngIf="image.errors.required || image.errors.notOnlyWhiteSpace">
+            <div *ngIf="image.errors.required || image.errors['notOnlyWhiteSpace']">
               Image es obligatorio
             </div>
-            <div *ngIf="image.errors.minlength">
+            <div *ngIf="image.errors['minlength']">
               Mínimo 2 caracteres
             </div>
           </div>

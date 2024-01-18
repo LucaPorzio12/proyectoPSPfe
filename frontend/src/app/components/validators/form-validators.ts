@@ -1,12 +1,19 @@
-import {FormControl, ValidationErrors} from "@angular/forms";
+import {AbstractControl, FormControl, ValidationErrors, ValidatorFn} from "@angular/forms";
 
-export class FormValidators{
-  static notOnlyWhiteSpace(control: FormControl): ValidationErrors | null{
-    if((control.value != null) && (control.value.trim().length == 0)){
-      return { notOnlyWhitespace: true};
-    }
-    else {
+export class FormValidators {
+  static notOnlyWhiteSpace(control: FormControl): ValidationErrors | null {
+    if ((control.value != null) && (control.value.trim().length == 0)) {
+      return {notOnlyWhitespace: true};
+    } else {
       return null;
+    }
+  }
+
+  static forbiddenName(nameRe: RegExp): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+      const forbidden = nameRe.test(control.value);
+      return forbidden ?
+        {forbiddenName: {value: control.value}} : null;
     }
   }
 }
